@@ -47,7 +47,7 @@
         <div @click="$router.push('/rt/add')" class="bg-green-500 text-white p-4 rounded-2xl text-center cursor-pointer">
           ➕ Tambah Data
         </div>
-        <div class="bg-blue-500 text-white p-4 rounded-2xl text-center">
+        <div @click="$router.push('/rt/pickup')" class="bg-blue-500 text-white p-4 rounded-2xl text-center">
           📦 Penjemputan
         </div>
       </div>

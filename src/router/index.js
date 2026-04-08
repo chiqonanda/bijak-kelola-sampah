@@ -14,6 +14,9 @@ import AddWasteStep3 from '../views/rt/AddWasteStep3.vue'
 import QuestRT from '../views/rt/QuestRT.vue'
 import TamanRT from '../views/rt/TamanRT.vue'
 import PeringkatRT from '../views/rt/PeringkatRT.vue'
+import PickupRT from '../views/rt/PickupRT.vue'
+
+
 
 const routes = [
   // Auth
@@ -55,6 +58,7 @@ const routes = [
   { path: '/rt/quest',      component: QuestRT        },
   { path: '/rt/taman',      component: TamanRT        },
   { path: '/rt/peringkat',  component: PeringkatRT    },
+  { path: '/rt/pickup', component: PickupRT },
 ]
 
 export default createRouter({

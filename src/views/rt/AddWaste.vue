@@ -24,12 +24,12 @@
       <!-- GRID -->
       <div class="grid grid-cols-2 gap-3">
 
-        <div @click="next" class="card">🍶 Botol Plastik</div>
-        <div @click="next" class="card">♻️ Plastik Lainnya</div>
-        <div @click="next" class="card">📄 Kertas</div>
-        <div @click="next" class="card">🔩 Logam</div>
-        <div @click="next" class="card">🧊 Kaca</div>
-        <div @click="next" class="card">🍂 Organik</div>
+        <div @click="next('plastik')" class="card">🍶 Botol Plastik</div>
+        <div @click="next('plastik_lain')" class="card">♻️ Plastik Lainnya</div>
+        <div @click="next('kertas')" class="card">📄 Kertas</div>
+        <div @click="next('logam')" class="card">🔩 Logam</div>
+        <div @click="next('kaca')" class="card">🧊 Kaca</div>
+        <div @click="next('organik')" class="card">🍂 Organik</div>
 
       </div>
 
@@ -41,12 +41,14 @@
 import { useRouter } from 'vue-router'
 const router = useRouter()
 
-const next = () => {
-  router.push('/rt') // sementara balik dulu
+// 🔥 SIMPAN JENIS SAMPAH
+const next = (type) => {
+  localStorage.setItem('type', type)
+  router.push('/rt/add-step2')
 }
 </script>
 
-<style>
+<style scoped>
 .card {
   background: white;
   padding: 20px;
