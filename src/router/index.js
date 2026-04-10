@@ -11,7 +11,7 @@ import AddWasteStep3 from '../views/rt/AddWasteStep3.vue'
 import QuestRT from '../views/rt/QuestRT.vue'
 import TamanRT from '../views/rt/TamanRT.vue'
 import PeringkatRT from '../views/rt/PeringkatRT.vue'
-
+import PickUpRT from '../views/rt/PickUpRT.vue'  // ✅ Diperbaiki: PickUp (U kapital)
 
 const routes = [
   // Auth
@@ -38,14 +38,11 @@ const routes = [
     name: 'ManajemenPenjemputan',
     component: () => import('../views/petugas/ManajemenPenjemputan.vue'),
   },
-
   {
     path: '/petugas/daftar-penjemputan',
     name: 'daftarPenjemputan',
-    // --- PERBAIKAN: Disarankan pakai lazy load biar nggak error import ---
-    component: () => import('../views/petugas/daftarPenjemputan.vue')
+    component: () => import('../views/petugas/daftarPenjemputan.vue'),
   },
-
   {
     path: '/petugas/penjemputan/:id',
     name: 'DetailPenjemputan',
@@ -54,13 +51,14 @@ const routes = [
   },
 
   // RT
-  { path: '/rt',            component: DashboardRT    },
-  { path: '/rt/add',         component: AddWaste       },
-  { path: '/rt/add-step2',   component: AddWasteStep2  },
-  { path: '/rt/add-step3',   component: AddWasteStep3  },
-  { path: '/rt/quest',       component: QuestRT        },
-  { path: '/rt/taman',       component: TamanRT        },
-  { path: '/rt/peringkat',   component: PeringkatRT    },
+  { path: '/rt',           component: DashboardRT    },
+  { path: '/rt/add',       component: AddWaste       },
+  { path: '/rt/add-step2', component: AddWasteStep2  },
+  { path: '/rt/add-step3', component: AddWasteStep3  },
+  { path: '/rt/quest',     component: QuestRT        },
+  { path: '/rt/taman',     component: TamanRT        },
+  { path: '/rt/peringkat', component: PeringkatRT    },
+  { path: '/rt/pickup',    component: PickUpRT       },  // ✅ Diperbaiki: PickUpRT
 ]
 
 const router = createRouter({
