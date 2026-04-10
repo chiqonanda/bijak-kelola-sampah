@@ -93,7 +93,10 @@
           </div>
         </div>
 
-        <button class="w-full mt-2 text-indigo-600 text-xs font-medium py-2 text-center">
+        <button 
+          @click="$router.push({ name: 'daftarPenjemputan' })"
+          class="w-full mt-2 text-indigo-600 text-xs font-medium py-2 text-center active:bg-indigo-50 rounded-lg transition-colors"
+        >
           Kelola Semua Penjemputan →
         </button>
       </section>
